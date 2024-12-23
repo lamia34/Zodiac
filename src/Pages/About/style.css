@@ -1,0 +1,138 @@
+.about-us-sec {
+    width: 65%;
+    margin: 80px auto;
+    display: flex;
+    gap: 60px;
+}
+
+.about-us-content {
+    width: 55%;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-us-content h3 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #305f3b;
+    margin-bottom: 30px;
+}
+
+.about-us-img {
+    width: 50%;
+    height: 500px;
+}
+
+.about-us-img img {
+    width: 100%;
+    height: 500px;
+}
+
+/* Why choose us */
+.why-choose-us-sec {
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    background-color: #4694547d;
+}
+
+.wcu-container {
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.wcu-container .icon {
+    font-size: 40px;
+    color: #305f3b;
+}
+
+.wcu-container div {
+    width: 40%;
+    padding: 30px 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #868686;
+    position: relative;
+    z-index: 0;
+}
+
+.wcu-container div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #7e7e7e;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #86be91;
+    z-index: 1;
+}
+
+/* Team */
+.team-sec {
+    width: 85%;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.why-choose-us-sec h2,
+.team-sec h2 {
+    display: inline-block;
+    position: relative;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #305f3b;
+}
+
+.why-choose-us-sec h2::before,
+.team-sec h2::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #4d865a;
+    visibility: visible;
+}
+
+.team-members {
+    display: flex;
+    gap: 20px;
+}
+
+.team-member {
+    width: 20%;
+    border: 1px solid #ebebeb;
+    box-shadow: 3px 3px 3px #ebebeb;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 1;
+}
+
+.team-member-info h5 {
+    color: #305f3b;
+    margin-top: 20px;
+}
+
+.team-member-info p .sm {
+    font-size: 24px;
+    color: #305f3b;
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    background-position: cover;
+}

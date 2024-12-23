@@ -1,0 +1,154 @@
+.portion-calculator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    width: 75%;
+    margin: 50px auto 90px;
+    gap: 40px;
+}
+
+.portion-calculator-info {
+    width: 55%;
+}
+
+.benefits,
+.feautures {
+    list-style-type: disc;
+}
+
+.portion-calculator-container {
+    width: 40%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-section {
+    padding: 20px 20px 0;
+    flex: 1 1 400px;
+}
+
+.result-section {
+    padding: 10px 20px 20px;
+    flex: 1 1 400px;
+}
+
+h2 {
+    color: #2a9d8f;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #57B26C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #378148;
+}
+
+.result-section {
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+}
+
+.dish-image {
+    width: 200px;
+    height: 150px;
+    max-width: 300px;
+    margin: 0 auto 20px;
+}
+
+.result-details h3 {
+    color: #2a9d8f;
+}
+
+.result-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result-details li {
+    margin: 5px 0;
+}
+
+.result-details p {
+    font-weight: bold;
+}
+
+.quote {
+    background: url(https://t4.ftcdn.net/jpg/09/27/98/27/360_F_927982721_wvm5OpWymCL4yqMyel7Rf5PxUtV3khr0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.overlay-quote {
+    background-color: #00000067;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+
+.overlay-quote p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.statics-container {
+    margin: 70px auto;
+    width: 70%;
+}
+
+.statics-container h3 {
+    text-align: center;
+    color: #305f3b;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.statics-container-icons {
+    display: flex;
+    gap: 50px;
+}
+
+.statics-container-icons li {
+    font-size: 48px;
+    color: #378148;
+
+    text-align: center;
+}
+
+.statics-container-icons li p {
+    margin-top: 10px;
+    font-size: 18px;
+}

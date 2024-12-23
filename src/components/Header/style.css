@@ -1,0 +1,144 @@
+header {
+  background: radial-gradient(circle, #1a1a40, #000); /* Kosmik rənglər */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Şaquli mərkəzləşdirmə */
+  justify-content: space-between; /* Məkanın düzgün paylaşımı */
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+/* Logo üçün */
+.logo {
+  display: flex;
+  align-items: center; /* Loqonu tam mərkəzləşdirir */
+  justify-content: center;
+}
+
+.logo img {
+  height: 100px; /* Loqonun hündürlüyü sabit saxlanır */
+  filter: drop-shadow(0 0 8px #fff);
+  transition: transform 0.3s ease-in-out, filter 0.3s ease;
+  border-radius: 20px;
+}
+
+/* Logo ilə menyu arasında boşluq */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Loqo və menyu arasında uyğun boşluq */
+  flex: 1; /* Menyu genişliyi */
+  justify-content: flex-end; /* Menyunu sağ tərəfdə saxlamaq üçün */
+}
+
+
+.logo img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 15px #ffd700); /* Neon effekti */
+}
+
+/* Ulduzlu fon */
+body {
+  background: url("https://source.unsplash.com/1920x1080/?galaxy,stars") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  color: #e0e0e0;
+}
+
+/* Menyu tərtibatı */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #00ffcc; /* Neon yaşıl rəng */
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+/* Aktiv düymə */
+.menu li a.active {
+  color: #ffd700; /* Neon qızıl rəng */
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+  border-bottom: 2px solid #ffd700;
+}
+
+/* Sağ tərəfdəki düymələr */
+.buttons .link {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.buttons .link:hover {
+  transform: scale(1.3);
+  color: #ff007f; /* Neon çəhrayı */
+  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+/* Neon parıltı üçün animasiya */
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 50px #00ffcc;
+  }
+}
+
+.menu li a:hover {
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+/* Kiçik ekranlar üçün uyğunlaşma */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
