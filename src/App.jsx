@@ -10,10 +10,12 @@ import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import BlogDetail from "./Pages/BlogDetail";
 import Contact from "./Pages/Contact";
-import PorsionPlanner from './Pages/PorsionPlanner';
 import Login from './Pages/Login';
 import Try from './Pages/Try'
 import Tarot from './Pages/Tarot'
+import Basket from './components/Basket';
+import Planet from './Pages/Planet'
+
 
 function App() {
 
@@ -25,10 +27,12 @@ function App() {
           <Route element={<Try />} path="/try" />
           <Route element={<Blog />} path="/blog" />
           <Route element={<BlogDetail />} path="/blogdetail/:postId" />
-          <Route element={<PorsionPlanner />} path="/porsionplanner" />
           <Route element={<Contact />} path="/contact" />
           <Route element={<Login />} path="/login" />
           <Route element={<Tarot />} path="/tarot" />
+          <Route element={<Basket />} path="/basket" />
+          <Route element={<Planet />} path="/planet" />
+          
 
         </Routes>
     </>

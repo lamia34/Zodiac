@@ -2,33 +2,33 @@ import { React, useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Instagram from "../../components/Instagram";
+import UpIcon from "../../components/UpIcon";
 
 // Icons
-import { FaTrash, FaDollarSign, FaCarrot, FaSeedling } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, } from "react-icons/fa";
 
 // Css
 import "./style.css";
 
 // SplideJS Slider
-import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/react-splide/css/core";
 
 const Home = () => {
-  // Feedback Show more
+  
   const [showMore, setShowMore] = useState(false);
 
   const handleShowMore = () => {
     document.querySelector(".feedbacks").classList.add("show-all");
-    setShowMore(true); // Update state to show "Show Less"
+    setShowMore(true); 
   };
 
   const handleShowLess = () => {
     document.querySelector(".feedbacks").classList.remove("show-all");
-    setShowMore(false); // Update state to show "Show More"
+    setShowMore(false); 
   };
 
-  // Discount-countdown
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
 
   useEffect(() => {
@@ -181,121 +181,94 @@ const Home = () => {
         </div>
       </section>
       {/* Feedbacks */}
-      <section className="feedbacks-section">
-        <div className="feedbacks">
-          <h2>Testimonials</h2>
-          <ul>
-            <li>
-              <div className="feedback">
-                <div className="fb">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRttLQ5cMFWWNnhDEkDrDUlF-x8oq5Mr1AF_Q&s"
-                    alt="volunteer-girl"
-                  />
-                  <div>
-                    <p className="name">
-                      Ethan Brooks{" "}
-                      <span className="volunteer">(volunteer)</span>
-                    </p>
-                    <p>
-                      "I love being part of this project! Seeing how small
-                      changes can have a big impact on food waste has been truly
-                      eye-opening. Plus, the volunteer team is amazing!"
-                    </p>
-                  </div>
-                </div>
+      <br/>
+      <br/>
+           <section className="team-sec">
+        <h2>Müştərilər</h2>
+        <div className="team-members">
+          <div className="team-member">
+            
+            <div className="team-member-info">
+              <h5>Tahir Novruzov</h5>
+              
+              <div>
+                <p>
+                  <FaInstagram className="sm" /> @tahir.novruzlu{" "}
+                </p>
+                <p>
+                  <FaLinkedin className="sm" />
+                  Novruzlu Tahir
+                </p>
               </div>
-            </li>
-            <li>
-              {" "}
-              <div className="feedback">
-                <div className="fb">
-                  <div>
-                    <p className="name">
-                      Sophia Miller <span className="user">(user)</span>
-                    </p>
-                    <p>
-                      "LowWaste makes sustainable living so effortless. I love
-                      it!"
-                    </p>
-                  </div>
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLLljn3BG5vTPhlCGNFtJlrygxI883URPRfw&s"
-                    alt="volunteer-girl"
-                  />
-                </div>
+            </div>
+          </div>
+          <div className="team-member">
+            
+            <div className="team-member-info">
+              <h5>Fidan Shamilova</h5>
+              
+              <div>
+                <p>
+                  <FaInstagram className="sm" /> @fidan.shamilova
+                </p>
+                <p>
+                  <FaLinkedin className="sm" />
+                  Şamilova Fidan
+                </p>
               </div>
-            </li>
-            <li>
-              <div className="feedback">
-                <div className="fb">
-                  <img
-                    src="https://t3.ftcdn.net/jpg/08/23/31/12/360_F_823311272_ARqhWc0IDvhfpvT4av2W0cX5N9Abdi02.jpg"
-                    alt="volunteer-girl"
-                  />
-                  <div>
-                    <p className="name">
-                      Olivia Carter <span className="user">(user)</span>{" "}
-                    </p>
-                    <p>
-                      "LowWaste is not just a project; it's a lifestyle. The
-                      tools and resources provided make it so easy to adopt
-                      sustainable habits.
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div className="team-member">
+            
+            <div className="team-member-info">
+              <h5>Vugar Mammadov</h5>
+             
+              <div>
+                <p>
+                  <FaInstagram className="sm" /> @vugar.mammadov{" "}
+                </p>
+                <p>
+                  <FaLinkedin className="sm" />
+                  Məmmədov Vüqar
+                </p>
               </div>
-            </li>
-            <li className="extra-feedback">
-              {" "}
-              <div className="feedback">
-                <div className="fb">
-                  <div>
-                    <p className="name">
-                      Isabella Greene{" "}
-                      <span className="volunteer">(volunteer)</span>
-                    </p>
-                    <p>
-                      "Volunteering here was amazing. We truly made a
-                      difference!"
-                    </p>
-                  </div>
-                </div>{" "}
-                <img
-                  src="https://t3.ftcdn.net/jpg/06/46/92/68/360_F_646926810_sLEKc3E140TjFRlvIobHfK8JVedBBeIX.jpg"
-                  alt="volunteer-girl"
-                />
+            </div>
+          </div>
+          <div className="team-member">
+            
+            <div className="team-member-info">
+              <h5>Aysel Hasanova</h5>
+             
+              <div>
+                <p>
+                  <FaInstagram className="sm" /> @aysel.hasanova
+                </p>
+                <p>
+                  <FaLinkedin className="sm" />
+                  Həsənova Aysel
+                </p>
               </div>
-            </li>
-            <li className="extra-feedback">
-              <div className="feedback">
-                <div className="fb">
-                  <img
-                    src="https://media.istockphoto.com/id/1371301907/photo/friendly-young-man-wearing-denim-shirt.jpg?s=612x612&w=0&k=20&c=2KuVFEhKVdPstrmBo7m3pkaxiXkJMiJVUjelRxIcsoo="
-                    alt="volunteer-girl"
-                  />
-                  <div>
-                    <p className="name">
-                      Liam Turner <span className="user">(user)</span>
-                    </p>
-                    <p>
-                      "The portion calculator is a game-changer for reducing
-                      waste!"
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div className="team-member">
+            <div className="team-member-info">
+              <h5>Ibrahim Muradli</h5>
+              
+              <div>
+                <p>
+                  <FaInstagram className="sm" /> @ibrahim.muradli
+                </p>
+                <p>
+                  <FaLinkedin className="sm" />
+                  Muradlı İbrahim
+                </p>
               </div>
-            </li>
-          </ul>
-          <div className="show-more">
-            {!showMore ? (
-              <button onClick={handleShowMore}>Daha çoxunu göstər</button>
-            ) : (
-              <button onClick={handleShowLess}>Bağla</button>
-            )}
+            </div>
           </div>
         </div>
       </section>
+      <br/>
+      <br/>
       {/* Discount */}
       <section id="discount">
         <div className="discount-bg d-flex">
@@ -331,31 +304,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Statistics */}
-      <section className="statistic-sec">
-        <div className="statics-container">
-          <ul className="statics-container-icons">
-            <li>
-              <FaTrash />
-              <p>40% of all food is wasted globally</p>
-            </li>
-            <li>
-              <FaDollarSign />
-              <p>LowWaste users save an average of 30% more resources</p>
-            </li>
-            <li>
-              <FaCarrot />
-              <p>Join 5,000+ people already making a difference!</p>
-            </li>
-            <li>
-              <FaSeedling />
-              <p>Reduce up to 25kg of food waste annually per household.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
       <Instagram />
       <Footer />
+      <UpIcon/>
     </>
   );
 };

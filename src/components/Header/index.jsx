@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import "./style.css";
 import logo from "../../assets/img/Logo.webp"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping , faHeart, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const Header = () => {
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleUserIconHover = () => {
+    setIsHovered(!isHovered);
+  };
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
       <header>
@@ -17,35 +33,50 @@ const Header = () => {
 
           </div>
           <div className="col-10">
-            <ul className="menu">
+          <div className="burger" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faBars} />
+          </div>
+          <ul className={`menu ${menuOpen ? "active" : ""}`}>
               <li>
-              <NavLink activebutton='active' to="/">Ana səhifə</NavLink>
+              <NavLink activebutton='active' to="/">Giriş</NavLink>
               </li>
               <li>
-              <NavLink activebutton='active' to="/about">Bürclər </NavLink>
+              <NavLink activebutton='active' to="/about">Haqqında </NavLink>
               </li>
               <li>
-              <NavLink activebutton='active' to="/porsionplanner">PLANNER</NavLink>
+              <NavLink activebutton='active' to="/try">Bürclər</NavLink>
               </li>
               <li>
-              <NavLink activebutton='active' to="/blog">BLOG</NavLink>
-              </li>
-              <li>
-              <NavLink activebutton='active' to="/Try">Try</NavLink>
+              <NavLink activebutton='active' to="/blog">Blog</NavLink>
               </li>
               <li>
               <NavLink activebutton='active' to="/Tarot">Tarot</NavLink>
               </li>
               <li>
-              <NavLink activebutton='active' to="/contact">CONTACT</NavLink>
+              <NavLink activebutton='active' to="/planet">Planet</NavLink>
               </li>
               <li>
-            <NavLink activeclassname="active" to="/login">LOGIN</NavLink>
-             </li>
+              <NavLink activebutton='active' to="/contact">Əlaqə</NavLink>
+              </li>
+
+              <div className="user-actions">
+              <Link to="/basket">
+              <FontAwesomeIcon icon={faCartShopping} className="basket-icon" />
+              </Link>
+              <NavLink to="/favorites">
+              <FontAwesomeIcon icon={faHeart} className="heart-icon" />
+              </NavLink>
+              <NavLink to="/login">
+              <FontAwesomeIcon icon={faUser} className="user-icon" />
+              </NavLink>
+              <div className="burger" onClick={toggleMenu}>
+               <FontAwesomeIcon icon={faBars} />
+               </div>
+              </div>
              </ul>
             </div>
 
-          <div className=" col-1 buttons">
+          {/* <div className=" col-1 buttons">
             <Link className="link" to="/favorites">
               <span className="pi pi-heart"></span>
             </Link>
@@ -55,7 +86,7 @@ const Header = () => {
             <Link className="link" to="/cart">
               <span className="pi pi-shopping-cart"></span>
             </Link>
-          </div>
+          </div> */}
         </nav>
       </header>
     </>

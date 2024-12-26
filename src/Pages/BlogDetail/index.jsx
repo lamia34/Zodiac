@@ -1,14 +1,12 @@
-// React Tools
 import React from "react";
 import { useParams } from "react-router-dom";
 
-// Components
 import Header from "../../components/Header";
 import Instagram from "../../components/Instagram";
 import Footer from "../../components/Footer";
 import data from "../../Pages/Blog/data";
+import UpIcon from "../../components/UpIcon";
 
-// CSS
 import "./style.css";
 
 const BlogDetail = () => {
@@ -29,52 +27,55 @@ const BlogDetail = () => {
               />
             </div>
             <div className="bd-title">
-              <span>Food Waste</span>
+              <span>LamiAstro</span>
               <h2>{blogPost.title}</h2>
             </div>
             <div className="aut-publish">
               <p className="author">by Same Timahe</p>
               <p className="published-date"> Sep 17, 2023</p>
             </div>
-            <p>{blogPost.content}</p>
+            {blogPost.content.split('\n').map((line, index) => (
+              <span key={index}>{line}<br /></span>
+            ))}
           </div>
         </div>
         <div className="col-4">
           <div className=".">
-            <div className="categories">
-              <div className="categories-heading">
-                <h3>Categories</h3>
-              </div>
-              <div className="categories-content">
-                <ul className="categories-list" typeof="none">
-                  <li>
-                    <a href="./" className="d-flex justify-content-between">
-                      All <span>(250)</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./" className="d-flex justify-content-between">
-                      Impact<span>(80)</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./" className="d-flex justify-content-between">
-                      Trainings <span>(95)</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./" className="d-flex justify-content-between">
-                      Volunteers <span>(37)</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./" className="d-flex justify-content-between">
-                      Prevention <span>(42)</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="categories">
+  <div className="categories-heading">
+    <h3>Astroloji Kateqoriyalar</h3>
+  </div>
+  <div className="categories-content">
+    <ul className="categories-list" typeof="none">
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Hamısı <span>(250)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Bürclər <span>(80)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Günlük Təhlil <span>(95)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Uyğunluq Analizi <span>(37)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Ulduz Falı <span>(42)</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
             <div className="feauture-posts">
               <div className="feauture-heading">
                 <h3>Feature Posts</h3>
@@ -123,6 +124,7 @@ const BlogDetail = () => {
       </div>
       <Instagram />
       <Footer />
+      <UpIcon />
     </>
   );
 };

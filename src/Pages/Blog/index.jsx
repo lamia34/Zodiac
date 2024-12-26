@@ -5,6 +5,7 @@ import data from "./data";
 import Header from "../../components/Header";
 import Instagram from "../../components/Instagram";
 import Footer from "../../components/Footer";
+import UpIcon from "../../components/UpIcon";
 
 import { FaAngleLeft, FaAngleRight  } from "react-icons/fa";
 
@@ -44,20 +45,24 @@ const Blog = () => {
                   alt={blogPost.title}
                   className="blog-image"
                 />
-                <div className="post-content">
-                <h6>{blogPost.title}</h6>
-                <div className="aut-publish">
-                <p className="author">by Same Timahe</p>
-                <p className="published-date"> Sep 17, 2023</p>
-                </div>
-                </div>
-                {hoveredPost === blogPost.id && (
-                  <div className="overlay">
-                    <p>
-                      <Link to={`/blogdetail/${blogPost.id}`} className="readmore">Read more...</Link>
-                    </p>
-                  </div>
-                )}
+                 <div className="post-content">
+    <h6>{blogPost.title}</h6>
+    <div className="aut-publish">
+      <p className="author">by Same Timahe</p>
+      <p className="published-date">Sep 17, 2023</p>
+    </div>
+    
+    
+    {hoveredPost === blogPost.id && (
+      <div className="overlay">
+        <p>
+          <Link to={`/blogdetail/${blogPost.id}`} className="readmore">
+            Daha çoxu...
+          </Link>
+        </p>
+      </div>
+    )}
+  </div>
               </div>
             ))}
           </div>
@@ -75,40 +80,41 @@ const Blog = () => {
           </div>
         </div>
         <div className="col-4">
-          <div className="categories">
-            <div className="categories-heading">
-              <h3>Categories</h3>
-            </div>
-            <div className="categories-content">
-              <ul className="categories-list" typeof="none">
-                <li>
-                  <a href="./" className="d-flex justify-content-between">
-                    All <span>(250)</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="./" className="d-flex justify-content-between">
-                    Impact <span>(80)</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="./" className="d-flex justify-content-between">
-                    Trainings <span>(95)</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="./" className="d-flex justify-content-between">
-                    Volunteers <span>(37)</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="./" className="d-flex justify-content-between">
-                    Prevention <span>(42)</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="categories">
+  <div className="categories-heading">
+    <h3>Astroloji Kateqoriyalar</h3>
+  </div>
+  <div className="categories-content">
+    <ul className="categories-list" typeof="none">
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Hamısı <span>(250)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Bürclər <span>(80)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Günlük Təhlil <span>(95)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Uyğunluq Analizi <span>(37)</span>
+        </a>
+      </li>
+      <li>
+        <a href="./" className="d-flex justify-content-between">
+          Ulduz Falı <span>(42)</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
           <div className="feature-posts">
             <div className="feature-heading">
               <h3>Feature Posts</h3>
@@ -156,6 +162,7 @@ const Blog = () => {
       </div>
       <Instagram />
       <Footer />
+      <UpIcon/>
     </>
   );
 };

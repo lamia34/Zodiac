@@ -1,16 +1,26 @@
 header {
-  background: radial-gradient(circle, #1a1a40, #000); /* Kosmik rənglər */
+  background: radial-gradient(circle, #3c1053, #1c0c2b); /* Kosmik bənövşəyi tonlar */
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   display: flex;
-  align-items: center; /* Şaquli mərkəzləşdirmə */
-  justify-content: space-between; /* Məkanın düzgün paylaşımı */
-  max-width: 2000px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   margin: 0 auto;
+  animation: glowHeader 3s infinite alternate;
+}
+
+@keyframes glowHeader {
+  0%, 100% {
+    box-shadow: 0 0 20px #ff007f, 0 0 40px #ffd700, 0 0 60px #00ffcc;
+  }
+  50% {
+    box-shadow: 0 0 30px #ff00ff, 0 0 50px #ffd700, 0 0 70px #00ffcc;
+  }
 }
 
 .nav {
@@ -21,54 +31,38 @@ header {
   margin: 0 auto;
 }
 
-/* Logo üçün */
-.logo {
-  display: flex;
-  align-items: center; /* Loqonu tam mərkəzləşdirir */
-  justify-content: center;
-}
-
+/* Logo */
 .logo img {
-  height: 100px; /* Loqonun hündürlüyü sabit saxlanır */
-  filter: drop-shadow(0 0 8px #fff);
-  transition: transform 0.3s ease-in-out, filter 0.3s ease;
-  border-radius: 20px;
+  height: 100px;
+  filter: drop-shadow(0 0 15px #fff);
+  transition: transform 0.5s ease-in-out, filter 0.5s ease;
+  border-radius: 50%;
+  position: relative;
+  top: -50px;
+  left: -100px;
 }
-
-/* Logo ilə menyu arasında boşluq */
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Loqo və menyu arasında uyğun boşluq */
-  flex: 1; /* Menyu genişliyi */
-  justify-content: flex-end; /* Menyunu sağ tərəfdə saxlamaq üçün */
-}
-
 
 .logo img:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 15px #ffd700); /* Neon effekti */
+  transform: rotate(360deg) scale(1.2);
+  filter: drop-shadow(0 0 30px #ffd700);
 }
 
-/* Ulduzlu fon */
+
 body {
-  background: url("https://source.unsplash.com/1920x1080/?galaxy,stars") no-repeat center center fixed;
+  background: url(../../assets/img/backgrounf.webp);
   background-size: cover;
   font-family: "Montserrat", sans-serif;
   color: #e0e0e0;
+
 }
 
-/* Menyu tərtibatı */
+/* Menyu */
 .menu {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 0;
   margin: 0;
-}
-
-.menu li {
-  position: relative;
 }
 
 .menu li a {
@@ -76,69 +70,122 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  letter-spacing: 0.15rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .menu li a:hover {
-  color: #00ffcc; /* Neon yaşıl rəng */
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+  transform: scale(1.1);
+}
+
+
+.menu li a.active {
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+  border-bottom: 2px solid #ff007f;
+}
+
+/* İkonlar */
+.basket-icon, .heart-icon, .user-icon {
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.basket-icon:hover, .heart-icon:hover, .user-icon:hover {
+  color: #00ffcc;
+  transform: scale(1.2);
   text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 
-/* Aktiv düymə */
-.menu li a.active {
-  color: #ffd700; /* Neon qızıl rəng */
-  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
-  border-bottom: 2px solid #ffd700;
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px; 
+  margin-left: auto;
 }
 
-/* Sağ tərəfdəki düymələr */
-.buttons .link {
-  color: #fff;
+.user-actions .basket-icon,
+.user-actions .heart-icon,
+.user-actions .user-icon {
+  font-size: 1.5rem; 
+  color: #fff; 
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.user-actions .basket-icon:hover,
+.user-actions .heart-icon:hover,
+.user-actions .user-icon:hover {
+  transform: scale(1.2); 
+  color: #ffd700; 
+}
+
+
+
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 15px;
+}
+
+.user-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
   font-size: 1.5rem;
-  margin-left: 1rem;
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.buttons .link:hover {
-  transform: scale(1.3);
-  color: #ff007f; /* Neon çəhrayı */
-  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
-}
 
-/* Neon parıltı üçün animasiya */
-@keyframes neonGlow {
-  0%, 100% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
-  }
-  50% {
-    text-shadow: 0 0 10px #fff, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 50px #00ffcc;
-  }
-}
-
-.menu li a:hover {
-  animation: neonGlow 1.5s infinite alternate;
-}
-
-/* Kiçik ekranlar üçün uyğunlaşma */
-@media (max-width: 768px) {
-  .nav {
+@media (max-width: 600px) {
+  .menu {
+    display: none;
     flex-direction: column;
-    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #2f2e2e;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .user-actions {
+    display: none;
+  }
+}
+
+
+@media (min-width: 300px) {
+  .burger {
+    display: none;
   }
 
   .menu {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+    display: flex;
   }
 
-  .buttons {
-    margin-top: 1rem;
+  .user-actions {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
   }
 }
 

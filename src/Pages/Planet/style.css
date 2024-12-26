@@ -1,0 +1,121 @@
+.planets-page {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    background: url(https://media.istockphoto.com/id/536507269/photo/night-sky-with-bright-stars-and-blue-nebula.jpg?s=612x612&w=0&k=20&c=GyiSGEZ-zAD7SHrhTrlpanoCVpIH2MhLjVHXJ8huWC4=);
+  }
+  
+  h1 {
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  
+  .parent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: url(https://freesvg.org/img/ivak-Decorative-Sun.png);
+    background-size: cover; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 10; 
+}
+
+  
+  .planet-orbits {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: orbit 10s infinite linear;
+  }
+  
+  .planet img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .planet:hover img {
+    transform: scale(1.2);
+  }
+  
+  .planet h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #2980b9;
+  }
+  
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .planet:nth-child(1) { animation-duration: 4s; }
+  .planet:nth-child(2) { animation-duration: 6s; }
+  .planet:nth-child(3) { animation-duration: 8s; }
+  .planet:nth-child(4) { animation-duration: 10s; }
+  .planet:nth-child(5) { animation-duration: 12s; }
+  .planet:nth-child(6) { animation-duration: 14s; }
+  
+  
+  .planet:nth-child(1) { margin-left: 50px; }
+  .planet:nth-child(2) { margin-left: 80px; }
+  .planet:nth-child(3) { margin-left: 120px; }
+  .planet:nth-child(4) { margin-left: 160px; }
+  .planet:nth-child(5) { margin-left: 200px; }
+  .planet:nth-child(6) { margin-left: 240px; }
+  
+  .planet-details {
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .planet-details h2 {
+    color: #0a1c27;
+    margin-bottom: 10px;
+  }
+  
+  .planet-details p {
+    font-size: 16px;
+    color: #7f8c8d;
+  }
+  
+  

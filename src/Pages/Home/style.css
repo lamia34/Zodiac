@@ -10,41 +10,41 @@
     background-position: center;
     height: 100vh;
     width: 100%;
-    position: relative; /* Ensure overlay can be positioned on top */
+    position: relative; 
 }
 
 .overlay-hero {
-    background-color: rgba(47, 87, 57, 0.6); /* Semi-transparent dark overlay for better text visibility */
+    background-color: rgba(47, 87, 57, 0.6); 
     width: 100%;
-    height: 100%; /* Make overlay cover the whole section */
+    height: 100%; 
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Ensure overlay is on top of the image */
+    z-index: 1; 
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Ensure text appears above the overlay */
+    z-index: 2; 
     color: white;
-    margin-right: 50px; /* Adjust margin for better positioning */
-    text-align: right; /* Align text to the right for better visual balance */
-    padding: 0 20px; /* Add padding for spacing */
+    margin-right: 50px; 
+    text-align: right; 
+    padding: 0 20px;  
 }
 
 .bank-name {
     margin-bottom: 10px;
-    font-size: 80px; /* Slightly larger font size for better visibility */
+    font-size: 80px; 
     font-weight: 700;
     font-style: italic;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to improve text contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-content > p {
-    font-size: 50px; /* Slightly smaller font for paragraph */
+    font-size: 50px; 
     font-style: italic;
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to improve text contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 /* Promotion */
@@ -55,7 +55,7 @@
     justify-content: center;
     font-size: 30px;
     text-align: center;
-    color: #4d865a;
+    color: #ffffff;
 }
 
 .prom-content pre {
@@ -178,7 +178,6 @@
     width: 65%;
     padding: 15px;
     border: 1px solid #ebebeb;
-    /* box-shadow: 3px 3px 3px #ebebeb */
 }
 
 .feedbacks ul li div img {
@@ -300,7 +299,7 @@
 
 .summer2019 {
     color: #4d865a;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     overflow: initial;
     box-sizing: content-box;
@@ -329,14 +328,16 @@
 }
 
 .time {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 600;
+    color: black;
 }
 
 .time2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     margin-right: 20px;
+    color: black;
 }
 
 .discount-content>span {

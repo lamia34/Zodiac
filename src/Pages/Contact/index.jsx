@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Instagram from "../../components/Instagram";
 import { FaInstagram, FaTwitter } from "react-icons/fa";
+import UpIcon from "../../components/UpIcon";
 
 const Contact = () => {
   return (
@@ -14,36 +15,36 @@ const Contact = () => {
           <div className="row">
             <div className="col-6 contact">
               <div className="contact-info">
-                <h2>Contact info</h2>
+                <h2>Əlaqə məlumatları</h2>
                 <h4>
-                  <i className="fa-solid fa-location-dot" /> Adress{" "}
+                  <i className="fa-solid fa-location-dot" /> Ünvan{" "}
                 </h4>
                 <p>Azerbaijan State Oil and Industry University</p>
                 <h4>
-                  <i className="fa-solid fa-phone" /> Phone number{" "}
+                  <i className="fa-solid fa-phone" /> Mobil nömrə{" "}
                 </h4>
                 <p>+994(50)588-84-13</p>
                 <div className="contact-sm">
                   <h4>
-                    <i className="fa-solid fa-headphones" /> Contact
+                    <i className="fa-solid fa-headphones" /> Əlaqə
                   </h4>
                   <p>
                     {" "}
-                    <FaInstagram className="insta-icon" /> @lowwaste.aze
+                    <FaInstagram className="insta-icon" /> @LamiAstro.aze
                   </p>
                   <p>
                     {" "}
-                    <FaTwitter className="insta-icon" /> @lowwaste4147
+                    <FaTwitter className="insta-icon" /> @LamiAstro4147
                   </p>
                 </div>
               </div>
               <div className="send-message">
-                <h2>Send a message</h2>
+                <h2>Mesaj göndər</h2>
                 <form action="">
-                  <input type="text" placeholder="Name" />
+                  <input type="text" placeholder="Ad" />
                   <input type="email" placeholder="Email" />
-                  <input type="text" placeholder="Website" />
-                  <input type="text" placeholder="Message" />
+                  <input type="text" placeholder="Sayt" />
+                  <input type="text" placeholder="Mesaj" />
                   <input
                     type="submit"
                     className="submit-btn-send"
@@ -71,6 +72,7 @@ const Contact = () => {
       </section>
       <Instagram />
       <Footer />
+      <UpIcon/>
     </>
   );
 };
