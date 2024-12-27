@@ -30,6 +30,9 @@ const Blog = () => {
   return (
     <>
       <Header />
+      <br/>
+      <br/>
+      <br/>
       <div className="container-blog d-flex justify-content-around">
         <div className="col-8">
           <div className="posts d-flex flex-wrap">
@@ -160,6 +163,9 @@ const Blog = () => {
           </div>
         </div>
       </div>
+      <br/>
+      <br/>
+      <br/>
       <Instagram />
       <Footer />
       <UpIcon/>
